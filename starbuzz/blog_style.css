@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&display=swap');
+
+html {
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: lightskyblue;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    outline-style: none;
+    font-family: 'Pacifico';
+    font-size: 1em;
+}
+
+a:visited {
+    color: rgb(111, 172, 209);
+    margin: auto;
+    display: inline-block;
+    align-self: block;
+    outline-style: none;
+    font-family: 'Pacifico';
+    font-size: 1em;
+}
+
+a:hover {
+    display: inline-block;
+    background-color: rgb(200, 200, 200);
+    align-self: block;
+    outline-style: none;
+    font-family: 'Pacifico';
+    font-size: 1em;
+}
+
+h1 {
+    color:rgb(212, 40, 146);
+    display: inline;
+    font-weight: 100;
+    font-size: 8em;
+    font-family: 'Pacifico';
+}
+
+h2 {
+    color:rgb(115, 255, 1);
+    display: inline;
+    font-weight: 100;
+    font-size: 8em;
+    font-family: 'Pacifico';
+}
+
+h3 {
+    color: springgreen;
+    text-align: center;
+    font-family: 'Pacifico';
+    font-weight: 300;
+    font-size: 4em;
+}
+
+p {
+    font-family: 'Sacramento';
+    color: white;
+    font-weight: 900;
+    font-size: 4em;
+}
+
+body {
+    background-image: url("caramizi.jpg")
+
+}
