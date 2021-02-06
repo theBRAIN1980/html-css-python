@@ -1,0 +1,38 @@
+body {
+    height: 200vh;
+}
+
+div {
+    background-color:silver;
+    height: 7em;
+    width: 7em;
+    border-radius: 50%;
+}
+
+#relative {
+    background-color:tomato;
+    position: relative;
+    border-radius: 10%;
+    top: 1em;
+    left: 1em;
+}
+
+#absolute {
+    background-color: skyblue;
+    position: absolute;
+    top: 3em;
+    right: 10em;
+}
+
+#fixed {
+    background-color: orange;
+    position: fixed;
+    left: 7em;
+    z-index: 1;
+}
+
+#sticky {
+    background-color: royalblue;
+    position: sticky;
+    top: 0;
+}

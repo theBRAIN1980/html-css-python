@@ -60,6 +60,7 @@ h3 {
 }
 
 p {
+    text-align: left;
     font-family: 'Sacramento';
     color: white;
     font-weight: 900;
