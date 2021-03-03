@@ -1,0 +1,2 @@
+Socket- creeaza socket-
+bind - rezerva socket
