@@ -1,0 +1,17 @@
+CREATE SCHEMA `magazin` DEFAULT CHARACTER SET utf8 ;
+CREATE TABLE `magazin`.`produse` (
+  `idprodus` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `numep` VARCHAR(100) NULL,
+  `cantitate` SMALLINT(4) NULL,
+  `idfirma` VARCHAR(45) NULL,
+  `numefirma` VARCHAR(45) NULL,
+  `modelp` VARCHAR(45) NULL,
+  `adresafirma` VARCHAR(255) NULL,
+  `pret` VARCHAR(45) NULL,
+  `categoriep` VARCHAR(45) NULL,
+  `stocp` INT NULL,
+  `descrierep` VARCHAR(45) NULL,
+  `data_addp` VARCHAR(45) NULL,
+  PRIMARY KEY (`idprodus`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;

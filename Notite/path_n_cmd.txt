@@ -1,0 +1,8 @@
+-comanda de adaugat la path din linia de comanda
+    set path=%MYSQL_HOME%;C:\Program Files\MySQL\MySQL Server 8.0\bin (exemplu pentru mysql)
+
+-comanda de instalat/initializat mySQL in cmd
+    deschide CMD cu administrator 
+    cd C:\Program Files\MySQL\MySQL Server 8.0\bin (sau unde e instalat programul)
+    mysqld --install
+    mysqld --initialize
