@@ -5,4 +5,5 @@ def connect():
             host="localhost",
             user="root",
             passwd="root",
+            database="biblioteca"
             )
