@@ -1,9 +1,9 @@
 import socket 
 
 cSocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-cSocket.connect(("10.20.40.178",8005))
+cSocket.connect(("localhost",8005))
 
-cSocket.send(bytearray(0x41)) 
-#cSocket.sendall(b"Merge treaba?") 
+cSocket.send(b"Hey man, what's up?") 
+cSocket.sendall(b"Are you there?") 
  
 cSocket.close()

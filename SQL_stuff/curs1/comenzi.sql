@@ -70,5 +70,5 @@ CREATE TABLE carduri (
   data_expirare  DATETIME     NOT NULL,
   actualizare   TIMESTAMP    DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY  (idcard),
-  KEY idx_fk_idutilizator (idutilizator)
+  KEY idx_fk_idutilizator (idutilizator),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

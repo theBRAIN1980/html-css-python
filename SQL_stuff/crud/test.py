@@ -4,35 +4,40 @@ import config
 
 def insert(con,cursor):
     #read values to be inserted
-    sn=input("Nume: ")
-    sp=input("Prenume: ")
-    sa=input("An: ")
-    sg=input("Grupa: ")
-    sb=input("Bursa: ")
-    sd=input("Data nastere in format aaaa-ll-zz: ")
-    ssex = input("Sex, f sau m: ")
+    sn=input("Nume:")
+    sp=input("Prenume:")
+    sa=input("An:")
+    sg=input("Grupa:")
+    sb=input("Bursa:")
+    sd=input("Data nastere in format aaaa-ll-zz:")
+    ssex = input("Sex, f sau m:")
     #create the Insert query
     sql = "INSERT INTO studenti (nume,prenume,an, grupa, bursa,data_nastere,sex) VALUES (%s, %s,%s, %s,%s, %s,%s)"
     #create list of values typed from user to insert in customer table
     val = (sn,sp,sa,sg,sb,sd,ssex)
-    #Execute query with values
-    cursor.execute(sql, val)
-    #commit for permanent storage in database
-    con.commit()
-    #display success message
-    print(cursor.rowcount, "Record inserted.")
+    try:
+        #Execute query with values
+        cursor.execute(sql, val)
+        #commit for permanent storage in database
+        con.commit()
+        #display success message
+        print(cursor.rowcount, "Record inserted.")
+    except:
+        # rollback used for if any error   
+        mysqldb.rollback()
+        print('Error: Inset')
     
     
 def update(con,cursor):
     #read values to be updated
-    sid=input("ID, unic pentru care dorim sa facem modificari: ")
-    sn=input("Nume: ")
-    sp=input("Prenume: ")
-    sa=input("An: ")
-    sg=input("Grupa: ")
-    sb=input("Bursa: ")
+    sid=input("ID, unic pentru care dorim sa facem modificari:")
+    sn=input("Nume:")
+    sp=input("Prenume:")
+    sa=input("An:")
+    sg=input("Grupa:")
+    sb=input("Bursa:")
     #create update query
-    sql = "UPDATE magazin.studenti SET nume='"+sn+"', prenume='"+sp+"',an='"+sa+"', grupa='"+sg+"', bursa='"+sb+"' WHERE ID='"+sid+"'"
+    sql = "update studenti set nume='"+sn+"', prenume='"+sp+"',an='"+sa+"', grupa='"+sg+"', bursa='" +sb+"' where ID="+sid
     #Execute Update query on opened cursor
     cursor.execute(sql)
     #commit Changes to DB   
@@ -61,12 +66,11 @@ def display(cursor):
     res = cursor.fetchall()
     #print
     print("------------------------------------------------------------------------")
-    print("ID   Nume    Prenume     An   Grupa   Bursa   Data Nastere    SexY")
+    print("ID   Nume    Prenume     An   Grupa   Status")
     print("------------------------------------------------------------------------")
           
     for x in res:
-        #print(str(x['id'])+"  "+str(x['nume'])+"  "+str(x['prenume'])+"  "+str(x['an'])+"  "+str(x['grupa'])+"  "+str(x['status']))
-        print(f"{str(x['id'])}   {str(x['nume'])} {str(x['prenume'])} {str(x['an'])}     {str(x['grupa'])}     {str(x['bursa'])} {str(x['data_nastere'])}     {str(x['sex'])}")
+        print(str(x['id'])+"  "+str(x['nume'])+"  "+str(x['prenume'])+"  "+str(x['an'])+"  "+str(x['grupa'])+"  "+str(x['status']))
     print("------------------------------------------------------------------------")    
    
    
@@ -77,17 +81,17 @@ def main():
    
     #opne cursor
     cursor = con.cursor(dictionary=True)
-    ch=""
+    ch=0
     #diaplay menu until user presses 5
-    while(ch!=0):
+    while(ch<=4):
         #menu options
         print("1. INSERT")
         print("2. UPDATE")
         print("3. DELETE")
         print("4. DISPLAY")
-        print("0. EXIT")
+        print("5. EXIT")
         # ask user to enter what he wants to do
-        ch=int(input("Ce doriti sa faceti? Introduceti cifra dorita: "))
+        ch=int(input("Ce doriti sa faceti? Introduceti cifra dorita:"))
         #call relevant fucntions defined above
         if (ch==1):
             insert(con, cursor)
@@ -97,8 +101,6 @@ def main():
             delete(con, cursor)
         if  (ch==4):
             display(cursor)
-    print("##############")
-    print("Program Ended.")
         
 #call main
 main()        
