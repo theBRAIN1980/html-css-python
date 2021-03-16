@@ -1,0 +1,15 @@
+.card {
+    display: inline-block;
+    background-image: url(https://raw.githubusercontent.com/miezuit/html-css-python/main/js/memory/img/wild_oliva.png);
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    visibility: hidden;
+}
