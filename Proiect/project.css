@@ -1,0 +1,27 @@
+* {
+    /* CSS Reset*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(173, 252, 173);
+}
+
+#btnGroupDrop1 {
+    color: black;
+    background-color: forestgreen;
+}
+
+.dropdown-menu {
+    background-color: rgb(84, 155, 84);
+}
+
+.butoane {
+    padding: 1em;
+    display: flex;
+    height: 50vh;
+    justify-content: space-between;
+    align-items: flex-end;
+}
