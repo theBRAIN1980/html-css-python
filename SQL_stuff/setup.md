@@ -52,3 +52,4 @@ print("Content-Type: text/html")
 print ("<h1>This is my first CGI script</h1>")
 ```
 - You must remove any tab / spaces before the #!
+
