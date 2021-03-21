@@ -21,7 +21,42 @@ body {
 .butoane {
     padding: 1em;
     display: flex;
-    height: 50vh;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+nav.navbar {
+    width: 100vw;
+    height: 20vh;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar .container-fluid .navbar-brand {
+    color:rgb(0, 0, 0);
+    font-size: 2.5em;
+}
+
+.navbar .container-fluid {
+    margin: 0;
+    height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(153, 255, 153);
+}
+
+.navbar-expand {
+    background-color: rgb(84, 155, 84);
+}
+
+.carduri {
+    display: flex;
+    justify-content: space-around;
+}
+
+.carduri .card-body {
+    height: 12vh;
+    display: flex;
+    background-color: rgb(173, 252, 173);
 }
