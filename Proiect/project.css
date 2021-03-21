@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgb(173, 252, 173);
+    background-color: rgb(50, 50, 50);
 }
 
 #btnGroupDrop1 {
@@ -55,8 +55,22 @@ nav.navbar {
     justify-content: space-around;
 }
 
-.carduri .card-body {
-    height: 12vh;
+.carduri .card {
     display: flex;
-    background-color: rgb(173, 252, 173);
+    background-color: rgb(50, 50, 50);
+    border: 0;
+    border-collapse: 0;
+    opacity: 75%;
+}
+
+.carduri .card:hover {
+    opacity: 100%;
+}
+
+.carduri .card .btn {
+    border: 0px;
+    padding: 1em;
+    width: 10em;
+    color: green;
+    background-color: black;
 }
