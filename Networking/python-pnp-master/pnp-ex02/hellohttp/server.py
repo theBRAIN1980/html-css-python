@@ -17,7 +17,7 @@ def read(sock):
         body = "This is not a valid page, my friend"
         code = "404 Not Found"
     else:
-        body = f"<html><body><p><b>{filename}<b/><p/>"
+        body = filename
     
 
     protocol = "HTTP/1.1"

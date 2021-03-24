@@ -4,7 +4,7 @@ import socket
 while True: 
     ticketCode = input("Scan or enter ticket code:") 
     client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    client.connect(("10.20.40.202",8005))
+    client.connect(("localhost",8005))
     client.send(f"POST /checkout HTTP/1.1\r\n\r\n{ticketCode}".encode("utf-8"))  
     parts = client.recv(1024).decode("utf-8").splitlines()
     description = parts[0].split(" ") 

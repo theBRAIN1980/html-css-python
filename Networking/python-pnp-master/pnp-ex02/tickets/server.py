@@ -1,6 +1,5 @@
 import socket
 import threading 
-import memoryhandler
 import persistentFileHandler
 
 def accept(sock):
@@ -50,15 +49,15 @@ class HttpHandler(threading.Thread):
                 body = "Not a valid command"
                 code = "400 Bad Request"
         
-        print(F"Returning {body}")
-        protocol = "HTTP/1.1"
-        self.sock.send(f"{protocol} {code}\r\nContent-Type: text/html\r\nConnection: Close\r\n\r\n{body}".encode("utf-8")) 
-        self.sock.close()
+            print(F"Returning {body}")
+            protocol = "HTTP/1.1"
+            self.sock.send(f"{protocol} {code}\r\nContent-Type: text/html\r\nConnection: Close\r\n\r\n{body}".encode("utf-8")) 
+            self.sock.close()
 
 
 sSocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 sSocket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
-sSocket.bind(("0.0.0.0",8005))
+sSocket.bind(("localhost",8005))
 sSocket.listen()
 
 while True:
