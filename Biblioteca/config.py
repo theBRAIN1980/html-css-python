@@ -1,9 +1,10 @@
-#import the module
+
 import mysql.connector
+
 def connect():
     return  mysql.connector.connect( 
-            host="localhost",
-            user="root",
-            passwd="root",
+            host="192.168.111.95",
+            user="thebrain",
+            passwd="pinky",
             database="biblioteca"
             )

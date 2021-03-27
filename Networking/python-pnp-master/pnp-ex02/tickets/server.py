@@ -57,7 +57,7 @@ class HttpHandler(threading.Thread):
 
 sSocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 sSocket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
-sSocket.bind(("localhost",8005))
+sSocket.bind(("0.0.0.0",8005))
 sSocket.listen()
 
 while True:

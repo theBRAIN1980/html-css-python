@@ -35,8 +35,9 @@ def insertticket():
         "used": False
     }
     serialize(tickets)
-    return newTicketId
     locker.release()
+    return newTicketId
+    
 
 
 def checkout(id):
