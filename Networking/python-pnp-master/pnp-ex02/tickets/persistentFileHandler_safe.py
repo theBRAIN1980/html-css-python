@@ -9,20 +9,20 @@ locker = threading.Lock()
 def deserialize():
     tickets = {}
     if os.path.exists(DATABASEFILE) and os.stat(DATABASEFILE).st_size > 0:
-        locker.acquire()
+        # locker.acquire()
         fin = open(DATABASEFILE)
         tickets = json.load(fin)
         fin.close()
-        locker.release()
+        # locker.release()
     return tickets
 
 
 def serialize(tickets):
-    locker.acquire()
+    # locker.acquire()
     fout = open(DATABASEFILE, "w")
     json.dump(tickets, fout)
     fout.close()
-    locker.release()
+    # locker.release()
 
 def insertticket():
     try:

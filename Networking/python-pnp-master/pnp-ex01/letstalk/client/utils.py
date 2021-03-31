@@ -7,7 +7,7 @@ def input_with_timeout(prompt, timeout):
     userInput = None
     try:
         userInput = get_input(prompt, timeout)
-    except:
+    except TimeoutExpired:
         pass
 
     return userInput
@@ -24,4 +24,4 @@ def get_input(prompt, timeout, timer=time.monotonic):
             if result[-1] == '\r':
                 return ''.join(result[:-1])
         time.sleep(0.04) # give other processes/threads to read the keystroke, if needed
-    raise Exception
+    raise TimeoutExpired

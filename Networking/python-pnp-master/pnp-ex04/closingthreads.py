@@ -1,5 +1,4 @@
 import threading, time
-import datetime
 
 class MyThread(threading.Thread):
     active = False
@@ -8,16 +7,15 @@ class MyThread(threading.Thread):
     def run(self): 
             self.active = True
             print("I am going to sleep 10 seconds")
-            time1 = datetime.datetime.now()
-            for i in range(1000):
-                time.sleep(0)
+            for i in range(10000):
+                time.sleep(0.001)
                 if not self.active:
                     return
-            time2 = datetime.datetime.now()
-            print(f"It took {time2-time1} s")
+                print("Thread is running")
+
 mt = MyThread() 
 mt.start()  
 time.sleep(2)
 print("Hey, wake up!")
-#mt.stop_thread()
+mt.stop_thread()
 

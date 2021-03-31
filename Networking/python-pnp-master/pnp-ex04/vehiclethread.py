@@ -23,8 +23,8 @@ class Vehicle(threading.Thread):
                 print(f"{self.type} is running ({self.fuel:.2f})")
                 self.fuel-=self.consumption
 
-car     = Vehicle("car")
-truck   = Vehicle("truck")
+car     = Vehicle("truck")
+truck   = Vehicle("car")
 
 car.start()
 truck.start()
