@@ -70,14 +70,21 @@ def display(cursor):
         print("--------------------------------")
         print(f"{str(x['id'])} {str(x['titlu'])} {str(x['anul_lansarii'])} {str(x['autor'])}")
 
+def delete(con,cursor):
+    sid=input("Enter  ID :")
+    sql = "delete FROM carte where ID = '"+sid+"'"
+    cursor.execute(sql)
+    con.commit()
+    print(cursor.rowcount, "Record deleted.")
+
 def main():
-    #make connection to database
+
     con = config.connect()
    
-    #open cursor
+   
     cursor = con.cursor(dictionary=True)
     ch=0
-    #diaplay menu until user presses 5
+    
     while(ch<=4):
         #menu options
         print("1. INSERT")
