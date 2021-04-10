@@ -69,6 +69,9 @@ def display(cursor):
     for x in res:
         print("--------------------------------")
         print(f"{str(x['id'])} {str(x['titlu'])} {str(x['anul_lansarii'])} {str(x['autor'])}")
+    print("--------------------------------")
+    print("")
+
 
 def delete(con,cursor):
     sid=input("Enter  ID :")
