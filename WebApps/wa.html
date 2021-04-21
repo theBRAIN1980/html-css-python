@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            Task 1
+        </li>
+        <li>
+            Task 2
+        </li>
+    </ul>
+    <input type="text" name="" in="input_id" placeholder="Introdu un nou task">
+    <button onclick="adaugaElement()" >Adaugare</button>
+
+    <script>
+        var li1 = document.getElementById("task1")
+        console.log(li1.value)
+        var nr = 3
+
+        function adaugaElement() {
+            var input_text = document.getElementById("task1")
+            
+            var li2 = document.createElement("li")
+            li2.innerHTML = input_text.value
+
+            var ul = document.getElementsByTagName("ul")[0]
+            input_text.value = ""
+
+            
+            ul.appendChild(li2)
+            nr++
+            }
+    </script>
+</body>
+</html>

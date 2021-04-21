@@ -1,0 +1,2 @@
+Document Object Model sau DOM
+browserul creaza o instanta DOM pe baza datelor site-ului
