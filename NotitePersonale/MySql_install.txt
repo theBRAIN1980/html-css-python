@@ -1,0 +1,7 @@
+Trebuie pornit serviciul Mysql manual.
+CMD ca admin si cd C:\Program Files\MySQL\MySQL Server 8.0\bin
+mysqld --install
+mysqld --initialize
+
+trebuie pornit serviciul cu comanda:
+net start mysql
