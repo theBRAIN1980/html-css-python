@@ -37,6 +37,7 @@ def getSym():
     symbolsList = [s['symbol'] for s in symbols]
     print(symbolsList)
     print(len(symbolsList))
+
 # test()
 # getTime()
 #getTrades("BNBUSDT")
