@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="post" id='formular'>
+        <input type="text" placeholder="Prenume" id="firstname" name="firstname"> </br> </br>
+        <input type="text" placeholder="Nume de Familie" id="lastname" name="lastname"> </br> </br>
+        <input type="submit" value="Trimite Nume" id="submit">
+    </form>
+    <script>
+        var formular = document.getElementById("formular");
+        var submit_data = document.getelementById("submit");
+
+        submitButton = document.getElementById("submit");
+        submit_data.onclick = function check() {
+            if(conf == true) {
+                this.form.submit()
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

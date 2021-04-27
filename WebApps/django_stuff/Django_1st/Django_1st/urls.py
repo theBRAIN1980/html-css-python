@@ -15,7 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponse
+import blog.views as views
+from django.shortcuts import render
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/', lambda request: HttpResponse("<h1>How are you?</h1>")),
+    # path('about/', views.about),
+    path('add/', views.add),
+    path('multiplicare/<int:a>/<int:b>/<int:c>', views.mul),
+    path('', views.IndexPage.as_view()),
+    path('about/', views.AboutPage.as_view()),
+    path('blog/', views.BlogPage.as_view()),
+    path('contact/', views.ContactPage.as_view()),
+    path('proj1/', views.Proj1Page.as_view()),
+    path('projects/', views.ProjectsPage.as_view()),
+    path('singlepost/', views.SinglePage.as_view()),
+    path('greet/<str:nume>', views.SalutPage.as_view())
 ]
