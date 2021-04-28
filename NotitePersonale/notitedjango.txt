@@ -29,3 +29,5 @@ Aplicatii:
             poti vedea obiectele create cu: ClasaCuCareLucrezi.objects.all()
             poti creea obiecte cu: ClasaCuCareLucrezi.objects.create(ColoanaDinBazaDeDate='date',
                 ColoanaDinBazaDeDate2='date2', ColoanaDinBazaDeDate3='date3', ColoanaDinBazaDeDate4='date4')
+
+        

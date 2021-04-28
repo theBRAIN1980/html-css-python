@@ -49,3 +49,7 @@ class SalutPage(TemplateView):
         context = {'username': kwargs['name']}
         return context
 
+def reversed_string(request, string_data):
+    return HttpResponse(f"{string_data[::-1]}")
+
+

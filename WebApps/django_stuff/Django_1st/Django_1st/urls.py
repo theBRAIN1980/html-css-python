@@ -33,5 +33,6 @@ urlpatterns = [
     path('proj1/', views.Proj1Page.as_view()),
     path('projects/', views.ProjectsPage.as_view()),
     path('singlepost/', views.SinglePage.as_view()),
-    path('greet/<str:nume>', views.SalutPage.as_view())
+    path('greet/<str:nume>', views.SalutPage.as_view()),
+    path('reverse/<str:string_data>', views.reversed_string),
 ]
