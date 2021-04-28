@@ -1,0 +1,4 @@
+vine instalat odata cu Python
+
+se upgradeaza cu comanda:
+    pip install --upgrade pip

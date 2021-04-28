@@ -1,0 +1,35 @@
+instaleaza modulul virtualenv cu comanda:
+    pip install virtualenv
+
+creezi un folder Environments sau denumit oricum
+creezi mediul virtual cu comanda:
+    python -m venv project_env    (virtualenv project_env pe Mac)  
+        (project_env este numele pe care l-am dat eu, poate fi orice)
+
+mediul virtual trebuie activat cu comanda:
+    project_env\Scripts\activate.bat 
+    (sau "numele_proiectului\Scripts\activate.bat" din folderul unde sunt instalate mediile virtuale)
+
+trebuie instalate doua module cu pip
+    pip install requests
+    pip install pytz
+
+ca sa stergi un venv folosesti comanda:
+    rmdir numelefisierului /s
+
+pentru un venv care sa foloseasca modulele globale (adica tot ce ai instalat in mediul normal):
+    python -m venv numele_mediului_virtual --system-site-packages
+     se activeaza cu activate.bat direct din folderul unde se gaseste activate.bat
+
+pip list --local listeaza pachetele instalate in venv
+pip freeze --local listeza pachetele din venv cu detalii care pot fi copiate
+
+
+
+optional:
+    trebuie creat un fisier txt care sa permita creearea mediilor virtuale cu aceleasi pachete instalate
+        pip freeze listeaza pachetele pe care le copiem intr-un fisier txt pe baza caruia se pot crea venv-uri
+        cu aceleasi pachete pe viitor. Nu e un pas obligatoriu dar usureaza munca daca o sa ai nevoie de multe
+        venv-uri.
+        un nou venv care foloseste fisierul txt cu pachete se creeaza cu comanda:
+            pip install -r numelefisierului.txt
