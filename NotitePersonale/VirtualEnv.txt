@@ -3,12 +3,13 @@ instaleaza modulul virtualenv cu comanda:
 
 creezi un folder Environments sau denumit oricum
 creezi mediul virtual cu comanda:
-    python -m venv project_env    (virtualenv project_env pe Mac)  
-        (project_env este numele pe care l-am dat eu, poate fi orice)
+    python -m venv numele_mediului_virtual    ('virtualenv numele_mediului_virtual' pe Mac)  
 
 mediul virtual trebuie activat cu comanda:
-    project_env\Scripts\activate.bat 
-    (sau "numele_proiectului\Scripts\activate.bat" din folderul unde sunt instalate mediile virtuale)
+    numele_mediului_virtual\Scripts\activate.bat 
+    (sau "activate.bat" direct din folderul unde este instalat mediul virtual respectiv)
+        de ex din C:\Python\SchoolStuff\Environments\m_virtual1\Scripts deschizi cmd si rulezi direct activate.bat
+        opresti cu deactivate
 
 trebuie instalate doua module cu pip
     pip install requests
