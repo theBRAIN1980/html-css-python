@@ -1,1 +1,31 @@
 Documentatie DjangoProject.com
+
+Aplicatii:
+    cand creezi o aplicatie noua, in aplicatie o sa existe un fisier models.py asociat aplicatiei,
+        de fiecare data cand se aduc modificari la models.py trebuie rulate comenzile:
+            python manage.py makemigrations care creeaza migratiile
+            python manage.py migrate        care le face efectiv
+
+        in models.py creezi clase care mostenesc din models.Model
+        cu care definesti obiectele ce vor fi introduse in baza de date
+            de exemplu clasa Product:
+                                        class Product(models.Model):
+                                            title       = models.TextField()
+                                            description = models.TextField()
+                                            price       = models.TextField()
+                                            summary     = models.TextField(default="WTF BRO!")
+        unde title, descrition, price, summary vor fi coloane din baza de date asociata aplicatiei respective
+        pe baza acestei clase poti crea obiecte care vor reprezenta produse diferite si care vor fi stocate
+        automat in baza de date
+        odata creeata o clasa te duci in fisierul admin.py asociat aplicatiei si importi clasa respectiva
+            from .models import NumeleClasei
+            apoi, tot in admin.py o inregistrezi pe site cu admin.site.register(NumeleClasei)
+        
+        Shell
+        din cmd in root-ul proiectului:
+            python manage.py shell
+            importi din aplicatia ta clasa cu care vrei sa lucrezi:
+                from numele_aplicatiei.moodels import ClasaCuCareLucrezi
+            poti vedea obiectele create cu: ClasaCuCareLucrezi.objects.all()
+            poti creea obiecte cu: ClasaCuCareLucrezi.objects.create(ColoanaDinBazaDeDate='date',
+                ColoanaDinBazaDeDate2='date2', ColoanaDinBazaDeDate3='date3', ColoanaDinBazaDeDate4='date4')
