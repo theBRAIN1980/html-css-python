@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load shop_tags  %}
+{% block title %} 
+Lista Categoriilor si a Produselor
+{%  endblock %}
+{% block content %}
+    <h1>
+        <ul>
+            {% for i in categories %}
+                <li>
+                    {{ i.name }}
+                    {{ i.slug }}
+                </li>
+            {% endfor %}
+
+    <div>
+        <p>Am adaugat in total {% total_products %} posts so far</p>
+    </div>
+             
+            {% for product in products %}
+                <li>
+                <a href="{{ product.get_absolute_url }}">
+                    <img src="{% if product.image %}
+                    {{ product.image }}
+                    {% endif %}">
+                </a>
+                    {{ product.category }}
+                    {{ product.name }}
+                    {{ product.description }}
+                    {{ product.available }}
+                </li>           
+                {% endfor %}
+        </ul>
+</h1>
+{% endblock %}

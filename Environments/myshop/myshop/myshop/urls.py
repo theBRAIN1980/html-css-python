@@ -15,8 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from shop.views import product_list
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.sitemaps.views import sitemap
+from shop.sitemaps import ProductSitemap
 
+sitemaps = {'products': ProductSitemap}
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('shop.urls')),
-]
+    path('list/', product_list, name='list'),
+    path('account/', include('account.urls')),
+    path('shop/', include(('shop.urls', 'shop'), namespace='shop')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

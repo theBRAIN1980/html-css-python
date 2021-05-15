@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Category, Product
+from shop import views
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):

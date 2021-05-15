@@ -1,0 +1,28 @@
+{% extends "shop/base.html"%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        {% for product in products %}
+        <li>
+            <a href="{{ product.get_absolute_url }}">
+                    <img src="{% if product.image %}
+                    {{ product.image }}
+                    {% endif %}">
+                </a>
+                    {{ product.category }}
+                    {{ product.name }}
+                    {{ product.description }}
+                    {{ product.available }}
+        </li>
+    </ul>
+</body>
+</html>

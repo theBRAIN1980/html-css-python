@@ -1,0 +1,230 @@
+[
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "name": "Placa Video",
+    "slug": "placa-video"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "name": "Procesor",
+    "slug": "procesor"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "name": "Memorii",
+    "slug": "memorii"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 4,
+  "fields": {
+    "name": "SSD",
+    "slug": "ssd"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 5,
+  "fields": {
+    "name": "Carcase",
+    "slug": "carcase"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 6,
+  "fields": {
+    "name": "Surse",
+    "slug": "surse"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "name": "ASRock RX 5600 XT",
+    "slug": "asrock-rx-5600-xt",
+    "category": 1,
+    "description": "Cea mai placa video",
+    "image": "static/images/products20210505/download.jpg",
+    "price": "3000.00",
+    "available": true,
+    "created": "2021-05-05T16:13:09.056Z",
+    "updated": "2021-05-05T16:13:09.056Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "name": "Ryzen R5 3600X",
+    "slug": "ryzen-r5-3600x",
+    "category": 2,
+    "description": "Procesor de procesor",
+    "image": "static/images/products20210505/procesor-amd-ryzen-5-3600x-3-8-ghz-matisse-sockel-am4-tray-434981.jpg",
+    "price": "1200.00",
+    "available": true,
+    "created": "2021-05-05T16:33:20.853Z",
+    "updated": "2021-05-05T16:33:20.853Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "name": "Kingston DDR4 32GB",
+    "slug": "kingston-ddr4-32gb",
+    "category": 3,
+    "description": "Memorii 3200 CL 16",
+    "image": "",
+    "price": "700.00",
+    "available": true,
+    "created": "2021-05-08T06:47:51.189Z",
+    "updated": "2021-05-08T06:47:51.189Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "name": "CoolerMaster HAF-XB Evo",
+    "slug": "coolermaster-haf-xb-evo",
+    "category": 5,
+    "description": "Gaming cube",
+    "image": "",
+    "price": "500.00",
+    "available": true,
+    "created": "2021-05-08T06:48:24.155Z",
+    "updated": "2021-05-08T06:48:24.155Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "name": "Samsung NVMe PRO 2TB",
+    "slug": "samsung-nvme-pro-2tb",
+    "category": 4,
+    "description": "SSD profesional",
+    "image": "",
+    "price": "2000.00",
+    "available": true,
+    "created": "2021-05-08T06:49:07.049Z",
+    "updated": "2021-05-08T06:49:07.049Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "name": "RX 6900 XT",
+    "slug": "rx-6900-xt",
+    "category": 1,
+    "description": "Placa video high end",
+    "image": "",
+    "price": "4500.00",
+    "available": true,
+    "created": "2021-05-08T06:49:49.759Z",
+    "updated": "2021-05-08T06:49:49.759Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "name": "R7 5900X",
+    "slug": "r7-5900x",
+    "category": 2,
+    "description": "12 nuclee 24 thread-uri",
+    "image": "",
+    "price": "2500.00",
+    "available": true,
+    "created": "2021-05-08T06:50:34.977Z",
+    "updated": "2021-05-08T06:50:34.977Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "name": "Corsair DDR 4 32GB",
+    "slug": "corsair-ddr-4-32gb",
+    "category": 3,
+    "description": "Memorie 3200 CL 16",
+    "image": "",
+    "price": "701.00",
+    "available": true,
+    "created": "2021-05-08T06:51:27.916Z",
+    "updated": "2021-05-08T06:51:27.916Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "name": "Adata 512 GB",
+    "slug": "adata-512-gb",
+    "category": 4,
+    "description": "SSD accesibil",
+    "image": "",
+    "price": "250.00",
+    "available": true,
+    "created": "2021-05-08T06:52:06.429Z",
+    "updated": "2021-05-08T06:52:06.429Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 10,
+  "fields": {
+    "name": "CoolerMaster MasterCase H500P",
+    "slug": "coolermaster-mastercase-h500p",
+    "category": 5,
+    "description": "carcasa mare",
+    "image": "static/images/products20210508/procesor-amd-ryzen-5-3600x-3-8-ghz-matisse-sockel-am4-tray-434981.jpg",
+    "price": "800.00",
+    "available": true,
+    "created": "2021-05-08T06:53:31.686Z",
+    "updated": "2021-05-08T08:34:44.635Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 11,
+  "fields": {
+    "name": "CooleMaster 750W",
+    "slug": "coolemaster-750w",
+    "category": 6,
+    "description": "Sursa 750 buget",
+    "image": "",
+    "price": "400.00",
+    "available": true,
+    "created": "2021-05-08T06:54:09.309Z",
+    "updated": "2021-05-08T06:54:09.309Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 12,
+  "fields": {
+    "name": "Seasonic 850W Gold",
+    "slug": "seasonic-850w-gold",
+    "category": 6,
+    "description": "Sursa premium certificare gold",
+    "image": "",
+    "price": "600.00",
+    "available": true,
+    "created": "2021-05-08T06:54:40.661Z",
+    "updated": "2021-05-08T06:54:40.661Z"
+  }
+}
+]
