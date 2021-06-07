@@ -1,11 +1,10 @@
 Documentatie DjangoProject.com
 
 Aplicatii:
-    cand creezi o aplicatie noua, in aplicatie o sa existe un fisier models.py asociat aplicatiei,
+    cand creezi o aplicatie noua, in aplicatie o sa existe un fisier models.py care defineste tabelele din baza de date asociata aplicatiei,
         de fiecare data cand se aduc modificari la models.py trebuie rulate comenzile:
-            python manage.py makemigrations care creeaza migratiile
-            python manage.py migrate        care le face efectiv
-
+            python manage.py makemigrations care creeaza schimbarile
+            python manage.py migrate        care le aplica
         in models.py creezi clase care mostenesc din models.Model
         cu care definesti obiectele ce vor fi introduse in baza de date
             de exemplu clasa Product:

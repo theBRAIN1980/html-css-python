@@ -28,6 +28,7 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('shop/', include(('shop.urls', 'shop'), namespace='shop')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
+    path('api/', include('shop.api.urls', namespace='api')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
